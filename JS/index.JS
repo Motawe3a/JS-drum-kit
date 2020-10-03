@@ -1,6 +1,4 @@
 window.addEventListener('keydown', playAudio);
-// const keys = document.querySelectorAll('.key');
-// keys.forEach(key => key.addEventListener('transitionend', removeClass))
 
 function playAudio(event) {
     const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
@@ -10,13 +8,6 @@ function playAudio(event) {
     audio.play();
     key.classList.add('playing');
 }
-// function removeClass(event) {
-//   console.log(event);
-//   if (event.propertyName !== 'transform') {
-//     return;
-//   }
-//   this.classList.remove('playing')
-// }
 
 function endSound(e) {
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
